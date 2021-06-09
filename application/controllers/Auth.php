@@ -13,7 +13,7 @@ class Auth extends CI_Controller
     {
         if ($this->session->has_userdata("_user_login")) {
 
-            redirect("backend/dashboard");
+            redirect("dashboard");
         }
 
         $data = [
@@ -77,7 +77,7 @@ class Auth extends CI_Controller
                         $msg = [
                             'success' => [
                                 'pesan' => "Anda berhasil login!",
-                                "url" => base_url("backend/dashboard")
+                                "url" => base_url("dashboard")
                             ]
                         ];
                     } else { // jika  password tidak cocok 

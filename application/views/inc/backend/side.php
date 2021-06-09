@@ -1,91 +1,21 @@
-  <body id="page-top">
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-
-      <!-- Sidebar -->
-      <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-        <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('backend/dashboard') ?>">
-          <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
-          </div>
-          <div class="sidebar-brand-text mx-3"><?= strtoupper(str_replace("_", " ", $this->session->userdata('_user_login')['role'])); ?></div>
-        </a>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0">
-
-        <!-- Nav Item - Dashboard -->
-        <li class="nav-item active">
-          <a class="nav-link" href="<?= base_url('backend/dashboard') ?>">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a>
-        </li>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider">
-
-        <!-- Heading -->
-        <div class="sidebar-heading">
-          Interface
-        </div>
-        <?php
-        $menu = getMenu();
-
-        if (!empty($menu)) :
-          foreach ($menu as $key => $value) :
-
-
-            echo "<li class='nav-item'>";
-
-            if (empty($value['child'])) {
-              echo "<a class='nav-link collapsed' href='" . base_url("backend/" . $value['url']) . "'>";
-              echo "<i class='$value[icon]'></i> ";
-              echo "<span>$value[nama_menu]</span> ";
-              echo "</a>";
-            } else {
-
-              echo "<a class='nav-link collapsed' href='#' data-toggle='collapse' data-target='#menu-" . $value['id_menu'] . "' aria-expanded='true' aria-controls='menu-" . $value['id_menu'] . "'>";
-              echo "<i class='$value[icon]'></i> ";
-              echo "<span>$value[nama_menu]</span> ";
-              echo "</a>";
-
-              echo "<div id='menu-" . $value['id_menu'] . "' class='collapse' aria-labelledby='headingTwo' data-parent='#accordionSidebar'>";
-              echo "<div class='bg-white py-2 collapse-inner rounded'>";
-              echo "<h6 class='collapse-header'>Sub Menu:</h6>";
-
-              foreach ($value['child'] as $k => $v) {
-                echo "<a class='collapse-item' href='" . base_url($v["role"] . "/" . $v['url']) . "'>$v[nama_menu]</a>";
-              }
-
-              echo "</div> ";
-              echo "</div> ";
-            }
-            echo "</li> ";
-
-
-          endforeach;
-        endif;
-        ?>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider">
-        <!-- Nav Item - Pages Collapse Menu -->
-        <!-- Nav Item - Charts -->
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
-            <i class="fas fa-power-off"></i>
-            <span>Log Out</span></a>
-        </li>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider d-none d-md-block">
-
-        <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
-          <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </div>
-
+<!-- ============================================================== -->
+<!-- End Topbar header -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Left Sidebar - style you can find in sidebar.scss  -->
+<!-- ============================================================== -->
+<aside class="left-sidebar" data-sidebarbg="skin5">
+  <!-- Sidebar scroll-->
+  <div class="scroll-sidebar">
+    <!-- Sidebar navigation-->
+    <nav class="sidebar-nav">
+      <ul id="sidebarnav" class="p-t-30">
+        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url(); ?>" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
+        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url("kasmasuk"); ?>" aria-expanded="false"><i class="mdi mdi-cash-multiple"></i><span class="hide-menu">Kas Masuk</span></a></li>
+        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url("kaskeluar"); ?>" aria-expanded="false"><i class="mdi mdi-pencil"></i><span class="hide-menu">Kas Keluar</span></a></li>
       </ul>
-      <!-- End of Sidebar -->
+    </nav>
+    <!-- End Sidebar navigation -->
+  </div>
+  <!-- End Sidebar scroll-->
+</aside>

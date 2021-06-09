@@ -1,58 +1,22 @@
-<!-- Footer -->
-</div>
-<footer class="sticky-footer bg-white">
-    <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-            <span>Copyright &copy; <?= date("Y"); ?></span>
-        </div>
-    </div>
-</footer>
-<!-- End of Footer -->
+	</div>
 
-</div>
-<!-- End of Content Wrapper -->
+	<script src="<?= base_url('assets/backend/'); ?>assets/libs/jquery/dist/jquery.min.js"></script>
+	<script src="<?= base_url('assets/backend/'); ?>dist/js/jquery.ui.touch-punch-improved.js"></script>
+	<script src="<?= base_url('assets/backend/'); ?>dist/js/jquery-ui.min.js"></script>
+	<!-- Bootstrap tether Core JavaScript -->
+	<script src="<?= base_url('assets/backend/'); ?>assets/libs/popper.js/dist/umd/popper.min.js"></script>
+	<script src="<?= base_url('assets/backend/'); ?>assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- slimscrollbar scrollbar JavaScript -->
+	<script src="<?= base_url('assets/backend/'); ?>assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+	<script src="<?= base_url('assets/backend/'); ?>assets/extra-libs/sparkline/sparkline.js"></script>
+	<!--Wave Effects -->
+	<script src="<?= base_url('assets/backend/'); ?>dist/js/waves.js"></script>
+	<!--Menu sidebar -->
+	<script src="<?= base_url('assets/backend/'); ?>dist/js/sidebarmenu.js"></script>
+	<!--Custom JavaScript -->
+	<script src="<?= base_url('assets/backend/'); ?>dist/js/custom.min.js"></script>
+	<!-- this page js -->
 
-</div>
-<!-- End of Page Wrapper -->
+	</body>
 
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
-
-<!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Bersiap Untuk Keluar?</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">Tekan "Logout" dibawah jika kamu infin keluar dari aplikasi dan mengakhiri sesi login</div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="<?= base_url('auth/logout/') ?>">Logout</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Bootstrap core JavaScript-->
-
-<script src="<?= base_url(); ?>assets/backend/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- Core plugin JavaScript-->
-<script src="<?= base_url(); ?>assets/backend/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-<!-- Custom scripts for all pages-->
-<script src="<?= base_url(); ?>assets/backend/js/sb-admin-2.min.js"></script>
-
-<script src="<?= base_url('assets/js/sweetalert2/sweetalert2.all.min.js'); ?>"></script>
-<script src="<?= base_url('assets/js/custom.js'); ?>"></script>
-
-
-</body>
-
-</html>
+	</html>

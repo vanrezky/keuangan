@@ -1,82 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>SB Admin 2 - Login</title>
-
-    <!-- Custom fonts for this template-->
-    <link href="<?= base_url(); ?>assets/backend/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="<?= base_url(); ?>assets/backend/css/sb-admin-2.min.css" rel="stylesheet">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url("assets/backend/"); ?>assets/images/favicon.png">
+    <title>Matrix Template - The Ultimate Multipurpose admin template</title>
+    <!-- Custom CSS -->
+    <link href="<?= base_url("assets/backend/"); ?>dist/css/style.min.css" rel="stylesheet">
 
 </head>
 
-<body class="bg-gradient-success">
+<body>
+    <div class="main-wrapper">
 
-    <div class="container">
+        <div class="preloader">
+            <div class="lds-ripple">
+                <div class="lds-pos"></div>
+                <div class="lds-pos"></div>
+            </div>
+        </div>
 
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
+        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center bg-dark">
+            <div class="auth-box bg-dark border-top border-secondary">
+                <div id="loginform">
+                    <div class="text-center mt-20">
+                        <span class="db"><img src="<?= base_url("assets/backend/"); ?>assets/images/logo.png" alt="logo" /></span>
+                    </div>
+                    <!-- Form -->
 
-            <div class="col-xl-10 col-lg-12 col-md-9">
-
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block">
-                                <img class="img-fluid" src="<?= base_url('assets/backend/img/login.png') ?>">
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Silahkan Login</h1>
-
+                    <form class="form-horizontal mt-5" id="submit-form" action="<?= base_url('auth/check') ?>">
+                        <div id="form-info"></div>
+                        <?= csrf_field("csrf_protection"); ?>
+                        <div class="row p-b-30">
+                            <div class="col-12">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-success text-white"><i class="ti-user"></i></span>
                                     </div>
-                                    <div id="form-info"></div>
-                                    <form class="user" id="form-submit" method="post" action="<?= base_url('auth/check') ?>">
-                                        <?= csrf_field("csrf_protection"); ?>
-                                        <div class="form-group">
-                                            <input type="text" name="username" id="username" class="form-control form-control-user">
-                                            <div class="invalid-feedback" id="feedusername"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" name="password" id="password" class="form-control form-control-user">
-                                            <div class="invalid-feedback" id="feedpassword"></div>
-                                        </div>
-                                        <button class="btn btn-primary pull-right btn-block" id="btn-submit" disabled type="submit"> Login</button>
-                                    </form>
+                                    <input type="text" name="username" id="username" class="form-control form-control-lg" placeholder="Username" aria-label="Username">
+                                    <div class="invalid-feedback" id="feedusername"></div>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-warning text-white"><i class="ti-pencil"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control form-control-lg" name="password" id="password" placeholder="Password" aria-label="Password">
+                                    <div class=" invalid-feedback" id="feedpassword">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <div class=" row border-top border-secondary">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <div class="mt-3">
+                                        <button class="btn btn-success float-right" id="btn-submit" type="submit">Login</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="<?= base_url(); ?>assets/backend/vendor/jquery/jquery.min.js"></script>
-    <script src="<?= base_url(); ?>assets/backend/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="<?= base_url(); ?>assets/backend/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="<?= base_url(); ?>assets/backend/js/sb-admin-2.min.js"></script>
+    <script src="<?= base_url("assets/backend/"); ?>assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="<?= base_url("assets/backend/"); ?>assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="<?= base_url("assets/backend/"); ?>assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="<?= base_url('assets/js/sweetalert2/sweetalert2.all.min.js'); ?>"></script>
+
     <script>
         $(document).ready(function() {
+            $(".preloader").fadeOut();
+
             $("#btn-submit").prop("disabled", false);
-            $("#form-submit").submit(function(e) {
+            $("#submit-form").submit(function(e) {
                 e.preventDefault();
 
                 $.ajax({

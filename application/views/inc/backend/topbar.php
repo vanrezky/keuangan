@@ -1,37 +1,91 @@
-   <!-- Content Wrapper -->
-   <div id="content-wrapper" class="d-flex flex-column">
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+      <!-- ============================================================== -->
+      <!-- Topbar header - style you can find in pages.scss -->
+      <!-- ============================================================== -->
+      <header class="topbar" data-navbarbg="skin5">
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+          <div class="navbar-header" data-logobg="skin5">
+            <!-- This is for the sidebar toggle which is visible on mobile only -->
+            <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <a class="navbar-brand" href="index.html">
+              <!-- Logo icon -->
+              <b class="logo-icon p-l-10">
+                <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                <!-- Dark Logo icon -->
+                <img src="<?= base_url('assets/backend/'); ?>assets/images/logo-icon.png" alt="homepage" class="light-logo" />
 
-     <!-- Main Content -->
-     <div id="content">
+              </b>
+              <!--End Logo icon -->
+              <!-- Logo text -->
+              <span class="logo-text">
+                <!-- dark Logo text -->
+                <img src="<?= base_url('assets/backend/'); ?>assets/images/logo-text.png" alt="homepage" class="light-logo" />
 
-       <!-- Topbar -->
-       <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-         <!-- Sidebar Toggle (Topbar) -->
-         <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-           <i class="fa fa-bars"></i>
-         </button>
-         <ul class="navbar-nav ml-auto">
+              </span>
+              <!-- Logo icon -->
+              <!-- <b class="logo-icon"> -->
+              <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+              <!-- Dark Logo icon -->
+              <!-- <img src="<?= base_url('assets/backend/'); ?>assets/images/logo-text.png" alt="homepage" class="light-logo" /> -->
 
-           <!-- Nav Item - Messages -->
-           <li class="nav-item dropdown no-arrow mx-1"></li>
-           <div class="topbar-divider d-none d-sm-block"></div>
+              <!-- </b> -->
+              <!--End Logo icon -->
+            </a>
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Toggle which is visible on mobile only -->
+            <!-- ============================================================== -->
+            <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="ti-more"></i></a>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Logo -->
+          <!-- ============================================================== -->
+          <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+            <!-- ============================================================== -->
+            <!-- toggle and nav items -->
+            <!-- ============================================================== -->
+            <ul class="navbar-nav float-left mr-auto">
+              <li class="nav-item d-none d-md-block"><a class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)" data-sidebartype="mini-sidebar"><i class="mdi mdi-menu font-24"></i></a></li>
+              <!-- ============================================================== -->
+              <!-- create new -->
+              <!-- ============================================================== -->
 
-           <!-- Nav Item - User Information -->
-           <li class="nav-item dropdown no-arrow">
-             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $this->session->userdata('_user_login')['nama']; ?></span>
-               <img class="img-profile rounded-circle" src="<?= base_url('assets/backend/img/user.png') ?>">
-             </a>
-             <!-- Dropdown - User Information -->
-             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-               <div class="dropdown-divider"></div>
-               <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                 Logout
-               </a>
-             </div>
-           </li>
-         </ul>
+              <!-- ============================================================== -->
+              <!-- Search -->
+              <!-- ============================================================== -->
+              <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
+                <form class="app-search position-absolute">
+                  <input type="text" class="form-control" placeholder="Search &amp; enter"> <a class="srh-btn"><i class="ti-close"></i></a>
+                </form>
+              </li>
+            </ul>
+            <!-- ============================================================== -->
+            <!-- Right side toggle and nav items -->
+            <!-- ============================================================== -->
+            <ul class="navbar-nav float-right">
 
-       </nav>
-       <!-- End of Topbar -->
+              <!-- ============================================================== -->
+              <!-- User profile and search -->
+              <!-- ============================================================== -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="<?= base_url('assets/backend/'); ?>assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
+                <div class="dropdown-menu dropdown-menu-right user-dd animated">
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+                </div>
+              </li>
+              <!-- ============================================================== -->
+              <!-- User profile and search -->
+              <!-- ============================================================== -->
+            </ul>
+          </div>
+        </nav>
+      </header>
